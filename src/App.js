@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Header, Footer } from './components';
-import AppRoutes from './Routes';
+import AppRoutes from './AppRoutes';
 import menu from './assets/js/menu';
 
 import './App.css';
