@@ -1,4 +1,4 @@
-import Header from './Header/Header'
+import Header from './header/Header'
 import Content from './content/Content'
 import Footer from './footer/Footer'
 
