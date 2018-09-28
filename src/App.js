@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Header, Content, Footer } from './components';
+import { Header, Footer } from './components';
 import AppRoutes from './Routes';
 import menu from './assets/js/menu';
 
@@ -19,12 +19,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* <Footer copyright='&copy; 2018' /> */}
-
-
-{/* <Provider store={store}>
-  <Router>
-    <AppRoutes />
-  </Router>
-</Provider> */}

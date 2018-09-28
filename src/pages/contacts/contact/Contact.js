@@ -1,40 +1,20 @@
-import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react';
+import { Route, Link } from "react-router-dom";
 
-
-// import { ContactSub } from './../index';
-import ContactSub from '../contact-sub/ContactSub';
+import ContactPersonal from '../contact-personal/ContactPersonal';
+import ContactWork from '../contact-work/ContactWork';
 
 import './Contact.css';
 
-class Contact extends Component {
-    render() {
+const Contact = () => (
+    <article>
+      <Link to="/contact/personal">Pessoal</Link>
+      <br/>
+      <Link to="/contact/work">Trabalho</Link>
 
-      const { match } = this.props;
-      
-      return (
-        <article>
-          foi aqui Contact
-          {/* <p> */}
-          {/* <Link to={`${match.url}/sub`}>SUB</Link> */}
-          <NavLink to="/contact/sub">SUB</NavLink>
-          {/* </p> */}
-          <hr />
-          {/* <p>url</p>
-          {this.props.match.url}
-          <p>path</p>
-          {this.props.match.path} */}
-          {/* <Switch> */}
-            <Route exact path="/contact/sub" component={ContactSub} />
-            {/* <Route path={`${match.url}/sub`} render={() => ContactSub} /> */}
-            {/* <Route exact path={match.url} render={() => <h3>Please select a topic.</h3>} */}
-            <Route exact path={`/contact`} render={() => <h3>Please select a topic.</h3>} />
-            {/* <Route exact path={`/contact`} component={ContactSub} /> */}
-          {/* </Switch> */}
-        </article>
-      );
-    }
-  }
+      <Route exact path="/contact/personal" component={ContactPersonal} />
+      <Route exact path="/contact/work" component={ContactWork} />
+    </article>
+)
 
 export default Contact;
