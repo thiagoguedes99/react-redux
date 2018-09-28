@@ -5,7 +5,7 @@ import './Footer.css';
 
 class Footer extends Component {
   render() {
-    const {copyright = '&copy; 2000'} = this.props
+    const {copyright = `&copy; ${new Date().getFullYear()}`} = this.props
 
     return (
       <footer className="footer__container">

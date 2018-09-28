@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 
 import { Home, About } from './pages';
 
-import Contact from './pages/contacts';
+import Contact from './pages/contacts-model';
 
 
 const AppRoutes = () => (
