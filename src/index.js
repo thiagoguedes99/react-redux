@@ -23,3 +23,6 @@ registerServiceWorker();
     <AppRoutes />
   </Router>
 </Provider> */}
+
+
+// react-loadable

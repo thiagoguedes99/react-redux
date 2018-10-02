@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+import { Button } from './../../../components'
 
 import { addContact } from '../actions';
 
@@ -13,7 +14,8 @@ class ContactPersonal extends Component {
 
     // this.state = {
     state = {
-      inputValue: ''
+      inputValue: '',
+      isLoading: false
     };
   // }
 
@@ -24,13 +26,16 @@ class ContactPersonal extends Component {
   }
 
   sendValue = () => {
-    this.props.addContact(this.state.inputValue)
-    this.setState({inputValue: ''})
+    this.setState({isLoading: true})
+    setTimeout(() => {
+      this.props.addContact(this.state.inputValue)
+      this.setState({inputValue: '', isLoading: false})
+    }, 1000)
   }
 
   render() {
     const { addContact, contacts } = this.props;
-    const { inputValue } = this.state;    
+    const { inputValue, isLoading } = this.state;    
     
     return (
       <article>
@@ -43,9 +48,12 @@ class ContactPersonal extends Component {
         />
 
         {/* <button onClick={() => addContact(inputValue)}> */}
-        <button onClick={() => this.sendValue()}>
+        
+        {/* <button onClick={() => this.sendValue()}>
           Click me!
-        </button>
+        </button> */}
+
+        <Button isLoading={isLoading} text='add contact' onHandleClick={this.sendValue}/>
 
         <div>
           {contacts.map((contact, index) =>

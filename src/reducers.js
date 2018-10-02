@@ -6,3 +6,16 @@ export const Reducers = combineReducers({
   contactsState: contactsReducer,
   // otherState: otherReducer
 });
+
+
+
+// const Button = ({ children }) =>
+//   <button>
+//     {children}
+//   </button>
+
+// const AlertIcon = () =>
+//   <img />
+
+// const AlertButton = ({childen}) =>
+//   <Button>{childen}<AlertIcon/></Button>

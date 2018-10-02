@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { helo } from '../../actions';
+// import { helo } from '../../actions';
 
 import './About.css';
 
@@ -24,18 +24,19 @@ class About extends Component {
   }
 }
 
-// datas
-const mapStateToProps = (state) => {
-  console.log('mapStateToProps state', state)
-  return {
-    myMesagem: state.msg
-  }
-}
+// // datas
+// const mapStateToProps = (state) => {
+//   console.log('mapStateToProps state', state)
+//   return {
+//     myMesagem: state.msg
+//   }
+// }
 
-//actions
-const mapDispatchToProps = (dispatch) => {
-  return {
-    myComponentAction: () => dispatch(helo())
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(About);
+// //actions
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     myComponentAction: () => dispatch(helo())
+//   }
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(About);
+export default About;
